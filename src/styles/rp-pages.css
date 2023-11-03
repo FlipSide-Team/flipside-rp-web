@@ -1,0 +1,135 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 100px;
+    margin-top: 5%;
+}
+
+.images {
+    width: 80%; /* 80% от ширины экрана */
+    overflow: hidden;
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 21px;
+}
+
+.sidebar {
+    width: 20%; /* 20% от ширины экрана */
+    background: #222; /* Цвет фона боковой панели */
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 21px;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.download-button {
+    width: 200px;
+    height: 40px;
+    background: #4B6C59;
+    color: #FFF;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.download-button:hover {
+    background: #374e41;
+}
+
+#description {
+    color: #c5c5c5;
+}
+
+.popup {
+    width: 470px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 21px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.2s ease;
+}
+
+#closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FFF;
+    background: none;
+}
+
+#closePopup:hover {
+    color: #FF0000; /* Измените цвет при наведении, если хотите */
+}
+
+.popup h1 {
+    font-size: 24px;
+}
+
+.popup p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #c5c5c5;
+}
+
+.popup input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #2e2e2e;
+    color: #FFF;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.popup button {
+    background: #4B6C59;
+    color: #FFF;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.popup button:hover {
+    background: #374e41;
+}
+
+.popup a {
+    color: #40a5ff;
+    text-decoration: none;
+    margin-left: 10px;
+}

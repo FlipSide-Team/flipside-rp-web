@@ -1,0 +1,50 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Здесь можно настроить количество колонок */
+    gap: 20px; /* Расстояние между элементами сетки */
+    margin: 20px 100px;
+    margin-top: 5%;
+}
+
+.grid-item {
+    background-color: #222; /* Цвет фона квадрата */
+    padding: 20px;
+    text-align: center;
+    border-radius: 21px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 21px;
+}
+
+.grid-item p {
+    color: #FFF;
+    margin-top: 10px;
+}
+
+.download-button {
+    width: 200px;
+    height: 40px;
+    background: #4B6C59;
+    color: #FFF;
+    border: none;
+    border-radius: 21px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.download-button:hover {
+    background: #374e41;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }

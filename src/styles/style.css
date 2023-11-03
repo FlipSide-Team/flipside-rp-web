@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #FFF;
+    font-style: normal;
+    line-height: normal;
+}
+
+a {
+    color: rgb(40, 84, 204);
+}
+
+/* Header */
+
+header {
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    user-select: none
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.nav a:hover {
+    color: #898989;
+}
+
+/* Home */
+
+.home {
+    position: fixed;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeLEFT {
+    color: #F5F5F5;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90.523%; /* 86.902px */
+    letter-spacing: 2.4px;
+    float: left;
+    width: 50%;
+}
+
+.homeLEFT p {
+    color: #898989;
+    margin-top: 20px;
+    font-size: 20px;
+    letter-spacing: 2px
+}
+
+.homeLEFT .btnHOME {
+    width: 359px;
+    height: 76px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 21px;
+    background: #4B6C59;
+    outline: none;
+    font-size: 1.1em;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .5s;
+}
+.homeLEFT a:hover {
+    background: #374e41;
+}
+
+.homeLEFT .btnHOME:hover {
+    background: #374e41;
+}
+
+.homeRIGHT {
+    color: #F5F5F5;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90.523%; /* 86.902px */
+    letter-spacing: 2.4px;
+    float: right;
+    width: 50%;
+}
+
+.homeRIGHT #logo {
+    user-select: none;
+    width: 500px;
+    transform: scaleX(-1);
+    transition: 0.5s;
+    border-radius: 160px;
+}
+
+.homeRIGHT #logo:hover {
+    box-shadow: 0 0 25px #4B6C59;
+}
+
+/* socials */
+
+.discord {
+    font-size: 1em;
+    width: 76px;
+    height: 76px;
+    color: #FFF;
+    background-color: #5865F2;
+    box-shadow: 0 0 20px black;
+    border: none;
+    border-radius: 21px;
+    transition: 0.5s;
+}
+
+.discord:hover {
+    box-shadow: 0 0 15px #5865F2;
+}
+
+.youtube {
+    font-size: 1em;
+    width: 76px;
+    height: 76px;
+    color: #FFF;
+    box-shadow: 0 0 20px black;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 21px;
+    transition: 0.5s;
+}
+
+.youtube:hover {
+    box-shadow: 0 0 15px #FF0000;
+}
+
+.tiktok {
+    font-size: 1em;
+    width: 76px;
+    height: 76px;
+    color: #FFF;
+    box-shadow: 0 0 20px black;
+    background-color: #ff0050;
+    border: none;
+    border-radius: 21px;
+    transition: 0.5s;
+}
+
+.tiktok:hover {
+    box-shadow: 0 0 15px #ff0050;
+}
+
+.mc-org-ua {
+    font-size: 1em;
+    width: 76px;
+    height: 76px;
+    color: #FFF;
+    box-shadow: 0 0 20px black;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/255px-Flag_of_Ukraine.svg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 21px;
+    transition: 0.5s;
+}
+
+.mc-org-ua:hover {
+    box-shadow: 0 0 15px #0056B9;
+}
+
+/* Footer */
+
+footer {
+    background: #222; /* Gray background color */
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fLeft {
+    width: 50%;
+}
+
+.fRight {
+    width: 50%;
+    text-align: right;
+}
+
+.fLeft h2, .fRight h3 {
+    font-size: 1.5em;
+}
+
+.fLeft p {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.fRight p {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* Style for email link */
+.fRight a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.fRight a:hover {
+    text-decoration: underline;
+}

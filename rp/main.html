@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/rp-pages.css">
+    <link rel="icon" href="../src/img/server-icon.png" type="image/x-icon"/>
+    <title>FlipSide RP</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">FlipSide RP | Ресурс паки | Main</h2>
+        <nav class="nav">
+            <a href="../index.html">Головна</a>
+            <a href="https://flipside-team.gitbook.io/flipside-rp/">Правила</a>
+            <a href="../rp.html">Ресурс паки</a>
+            <a href="http://rp.flipside.net.ua:29001">Мапа</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="images">
+            <img src="../src/img/rp/main/youtube-banner.png" alt="img1">
+        </div>
+
+        <div class="sidebar">
+            <img src="../src/img/rp/main/banner.png" alt="Картинка">
+            <h2>Основний ресурс пак серверу</h2>
+            <p id="description">Це основний ресурс пак серверу, його рекомендовано встановити всім гравцям.</p>
+            <p id="description">Цей ресурс пак додає логотип та іконки у табі перейменування(їх можна побачити у Discord) для предметів</p>
+            <button class="download-button" onclick="openPopup()"><i class="fa-solid fa-download"></i>Встановити</button>
+        </div>
+    </div>
+
+    <div class="popup" id="myPopup">
+        <button id="closePopup" onclick="closePopup()"> <i class="fa-solid fa-xmark"></i> </button>
+        <h1>Встановлення ресурс паку</h1>
+        <p>Натисніть "Копіювати" щоб скопіювати команду для встановлення ресурс паку на сервері, або натисніть "Встановити з Modrinth" щоб встановити файли ресурс паку на Modrinth</p>
+        <input type="text" id="copyText" value="/rp set main" readonly>
+        <button onclick="copyToClipboard()"><i class="fa-solid fa-copy"></i> Копіювати</button>
+        <a href="#"><i class="fa-solid fa-download"></i> Встановити з Modrinth</a>
+    </div>
+    <script src="https://kit.fontawesome.com/7fbf5a677b.js" crossorigin="anonymous"></script>
+    <script>
+        function openPopup() {
+            var popup = document.getElementById("myPopup");
+            popup.style.display = "block";
+            document.body.classList.add("popup-open");
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("myPopup");
+            popup.style.display = "none";
+            document.body.classList.remove("popup-open");
+        }
+
+        
+        function copyToClipboard() {
+            var copyText = document.getElementById("copyText");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Текст скопійовано: " + copyText.value);
+        }
+    </script>
+</body>
+</html>
