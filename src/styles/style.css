@@ -28,7 +28,8 @@ a {
 /* Header */
 
 header {
-    background: #222;
+    background: none;
+    border-bottom: #222;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,7 +60,34 @@ header {
     color: #898989;
 }
 
+.login a {
+    position: relative;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 21px;
+    color: #FFF;
+    user-select: none;
+    text-decoration: none;
+    background-color: #4B6C59;
+    padding: 16px;
+    transition: 0.5s;
+}
+
+.login a:hover {
+    background: #374e41;
+}
+
 /* Home */
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+   }
 
 .home {
     position: fixed;
@@ -125,14 +153,13 @@ header {
     width: 500px;
     transform: scaleX(-1);
     transition: 0.5s;
-    border-radius: 160px;
-}
-
-.homeRIGHT #logo:hover {
-    box-shadow: 0 0 25px #4B6C59;
 }
 
 /* socials */
+
+.socials i {
+    text-shadow: 0 0 3px black;
+}
 
 .discord {
     font-size: 1em;

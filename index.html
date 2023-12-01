@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="icon" href="src/img/server-icon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="src/styles/adaptive.css">
+    <link rel="icon" href="src/img/fl-rp-logo-bg.ico" type="image/x-icon"/>
     <title>FlipSide RP</title>
 </head>
 <body>
     <header>
         <h2 class="logo">FlipSide RP</h2>
+        <button class="nav-btn" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
         <nav class="nav">
             <a href="#">Головна</a>
             <a href="https://flipside-team.gitbook.io/flipside-rp/">Правила</a>
             <a href="rp">Ресурс паки</a>
             <a href="http://rp.flipside.net.ua:29001">Мапа</a>
         </nav>
+        <nav class="login">
+            <a href="#">Логін</a>
+        </nav>
     </header>
+    
     <section class="home">
         <div class="homeLEFT">
             <h1 class="hTitle">FlipSide RP</h1>
@@ -32,6 +38,7 @@
             <img src="src/img/logo.png" alt="logo" id="logo">
         </div>
     </section>
+    <div id="snow"></div>
     <footer>
         <div class="fLeft">
             <h2 class="logo">FlipSide RP</h2>
@@ -56,5 +63,78 @@
         function r_mc_org_ua() {
             window.location.href = "https://discord.gg/5DRCKTRhy3";
         }
+
+
+        // Добавляем функцию для открытия/закрытия выпадающего меню
+        function toggleNav() {
+            var nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function(){
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+            script.onload = function(){
+            particlesJS("snow", {
+            "particles": {
+            "number": {
+            "value": 70,
+            "density": {
+            "enable": true,
+            "value_area": 800
+            }
+            },
+            "color": {
+            "value": "#ffffff"
+            },
+            "opacity": {
+            "value": 0.7,
+            "random": false,
+            "anim": {
+            "enable": false
+            }
+            },
+            "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+            "enable": false
+            }
+            },
+            "line_linked": {
+            "enable": false
+            },
+            "move": {
+            "enable": true,
+            "speed": 3,
+            "direction": "bottom",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+            "enable": true,
+            "rotateX": 300,
+            "rotateY": 1200
+            }
+            }
+            },
+            "interactivity": {
+            "events": {
+            "onhover": {
+            "enable": false
+            },
+            "onclick": {
+            "enable": false
+            },
+            "resize": false
+            }
+            },
+            "retina_detect": true
+            });
+            }
+            document.head.append(script);
+        }      );
     </script>
 </body>
