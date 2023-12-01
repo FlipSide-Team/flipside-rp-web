@@ -16,7 +16,7 @@
 }
 
 .images {
-    width: 80%; /* 80% от ширины экрана */
+    width: 80%;
     overflow: hidden;
 }
 
@@ -27,8 +27,8 @@
 }
 
 .sidebar {
-    width: 20%; /* 20% от ширины экрана */
-    background: #222; /* Цвет фона боковой панели */
+    width: 20%;
+    background: #222;
     padding: 20px;
     text-align: center;
     color: #FFF;
@@ -89,7 +89,7 @@
 }
 
 #closePopup:hover {
-    color: #FF0000; /* Измените цвет при наведении, если хотите */
+    color: #FF0000;
 }
 
 .popup h1 {
