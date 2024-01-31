@@ -9,16 +9,25 @@
 
 body {
     background-color: #121212;
+    background-image: url(/static/src/img/bg.png);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-h2 {
+h2, h1 {
     color: #FFF;
     font-style: normal;
     line-height: normal;
+}
+
+p {
+    color: #FFF;
+}
+
+label {
+    color: #cacaca;
 }
 
 a {
@@ -73,49 +82,118 @@ header {
     transition: 0.5s;
 }
 
+.login button {
+    position: relative;
+    border: none;
+    color: #FFF;
+    user-select: none;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    transition: 0.5s;
+    width: 83px;
+    position: relative;
+}
+
+.login button img {
+    border-radius: 12px;
+}
+
 .login a:hover {
     background: #374e41;
 }
 
-/* Home */
+/* popup for users */
 
-#snow {
-    position: fixed;
-    top: 0;
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Position the popup just below the button */
     left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 1000;
-   }
+    border-radius: 10px;
+}
+
+.popup p {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.popup-btn {
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.popup-btn:hover {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    background: #4B6C59;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#logout:hover {
+    background: #ec0404;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Home */
 
 .home {
     position: fixed;
     padding: 20px 100px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.homeLEFT {
+.hTitle {
+    font-size: 70px;
     color: #F5F5F5;
-    font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 90.523%; /* 86.902px */
-    letter-spacing: 2.4px;
-    float: left;
-    width: 50%;
+    padding: 30px 60px;
+    text-align: center;
+    border-radius: 21px;
 }
 
-.homeLEFT p {
-    color: #898989;
+.home p {
+    color: #F5F5F5;
     margin-top: 20px;
     font-size: 20px;
-    letter-spacing: 2px
+    letter-spacing: 1.5px;
+    padding: 30px 60px;
+    font-weight: 100;
+    margin-top: 40px;
+    border-radius: 21px;
 }
 
-.homeLEFT .btnHOME {
+.home .btnHOME {
     width: 359px;
     height: 76px;
     flex-shrink: 0;
@@ -129,11 +207,16 @@ header {
     font-weight: 500;
     transition: .5s;
 }
-.homeLEFT a:hover {
+.home a:hover {
     background: #374e41;
 }
 
-.homeLEFT .btnHOME:hover {
+#socials {
+    font-size: 40px;
+    margin: 4px;
+}
+
+.home .btnHOME:hover {
     background: #374e41;
 }
 
@@ -149,25 +232,35 @@ header {
 }
 
 .homeRIGHT #logo {
-    user-select: none;
     width: 500px;
     transform: scaleX(-1);
-    transition: 0.5s;
 }
 
 /* socials */
+
+.column {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.socials {
+    margin-top: 10px;
+}
 
 .socials i {
     text-shadow: 0 0 3px black;
 }
 
+.socials p {
+    text-shadow: 0 0 3px black;
+}
+
 .discord {
     font-size: 1em;
-    width: 76px;
-    height: 76px;
+    height: 70px;
+    width: 330px;
     color: #FFF;
     background-color: #5865F2;
-    box-shadow: 0 0 20px black;
     border: none;
     border-radius: 21px;
     transition: 0.5s;
@@ -179,10 +272,9 @@ header {
 
 .youtube {
     font-size: 1em;
-    width: 76px;
-    height: 76px;
+    height: 70px;
+    width: 330px;
     color: #FFF;
-    box-shadow: 0 0 20px black;
     background-color: #FF0000;
     border: none;
     border-radius: 21px;
@@ -195,11 +287,10 @@ header {
 
 .tiktok {
     font-size: 1em;
-    width: 76px;
-    height: 76px;
+    height: 70px;
+    width: 330px;
     color: #FFF;
-    box-shadow: 0 0 20px black;
-    background-color: #ff0050;
+    background-color: #000000;
     border: none;
     border-radius: 21px;
     transition: 0.5s;
@@ -211,13 +302,10 @@ header {
 
 .mc-org-ua {
     font-size: 1em;
-    width: 76px;
-    height: 76px;
+    height: 70px;
+    width: 330px;
     color: #FFF;
-    box-shadow: 0 0 20px black;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/255px-Flag_of_Ukraine.svg.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #0056b9;
     border: none;
     border-radius: 21px;
     transition: 0.5s;
