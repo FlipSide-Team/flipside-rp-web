@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/adaptive.css">
-    <link rel="icon" href="src/img/fl-rp-logo-bg.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/src/styles/style.css">
+    <link rel="stylesheet" href="../static/src/styles/adaptive.css">
+    <link rel="icon" href="../static/src/img/fl-rp-logo-bg.ico" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/7fbf5a677b.js" crossorigin="anonymous"></script>
+    <!-- Embed -->
+    <meta property="type" content="website">
+    <meta property="title" content="FlipSide RP">
+    <meta property="description" name="description" content="Україномовний ванільний майнкрафт РП сервер">
+    <meta property="og:image" content="../static/src/img/logo.png">
+    <meta name="twitter:card" content="summary">
+    <!-- /Embed -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- JQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="../static/src/script/template.js"></script>
+    <!-- Utils -->
+    <script src="../static/src/script/utils.js"></script>
     <title>FlipSide RP</title>
 </head>
 <body>
@@ -18,28 +36,28 @@
             <a href="rp">Ресурс паки</a>
             <a href="http://rp.flipside.net.ua:29001">Мапа</a>
         </nav>
+        
         <nav class="login">
-            <a href="#">Логін</a>
+            <a href="{{oauth_url}}">Логін</a>
         </nav>
     </header>
     
     <section class="home">
-        <div class="homeLEFT">
-            <h1 class="hTitle">FlipSide RP</h1>
-            <p>україномовний ванільний майнкрафт РП сервер. Зараз триває 3 сезон</p>
-            <div class="socials">
-                <button class="discord" onclick="r_discord()"><i class="fa-brands fa-discord"></i></button>
-                <button class="youtube" onclick="r_youtube()"><i class="fa-brands fa-youtube"></i></button>
-                <button class="tiktok" onclick="r_tt()"><i class="fa-brands fa-tiktok"></i></button>
-                <button class="mc-org-ua" onclick="r_mc_org_ua()"><i class="fa-solid fa-gamepad"></i></i></button>
+        <h1 class="hTitle backdrop-blur-sm bg-slate-800/30">FlipSide RP</h1>
+        <p class="backdrop-blur-sm bg-slate-800/30">україномовний Minecraft сервер з елементами РП, на версії Java 1.20.1</p>
+        <div class="socials">
+            <div class="column">
+                <button id="socials" class="discord" onclick="r_discord()"><i class="fa-brands fa-discord"></i> Discord</button>
+                <button id="socials" class="youtube" onclick="r_youtube()"><i class="fa-brands fa-youtube"></i> YouTube</button>
+            </div>
+            <div class="column">
+                <button id="socials" class="tiktok" onclick="r_tt()"><i class="fa-brands fa-tiktok"></i> TikTok</button>
+                <button id="socials" class="mc-org-ua" onclick="r_mc_org_ua()"><i class="fa-solid fa-gamepad"></i> Моніторинг</button>
             </div>
         </div>
-        <div class="homeRIGHT">
-            <img src="src/img/logo.png" alt="logo" id="logo">
-        </div>
     </section>
-    <div id="snow"></div>
-    <footer>
+
+    <footer class="backdrop-blur-sm bg-slate-800/30">
         <div class="fLeft">
             <h2 class="logo">FlipSide RP</h2>
             <p>Copyright © FlipSide Team. FlipSide Team і сервера FlipSide не відносятся до Mojang Studios та Microsoft</p>
@@ -49,91 +67,31 @@
             <p><a href="mailto:info@flipside.net.ua">info@flipside.net.ua</a></p>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/7fbf5a677b.js" crossorigin="anonymous"></script>
+    
     <script>
-        function r_discord() {
-            window.location.href = "https://discord.gg/5DRCKTRhy3";
-        }
-        function r_youtube() {
-            window.location.href = "https://www.youtube.com/@flipside-rp";
-        }
-        function r_tt() {
-            window.location.href = "https://www.tiktok.com/@flipside_rp";
-        }
-        function r_mc_org_ua() {
-            window.location.href = "https://minecraft.org.ua/minecraft-servers/FlipSide-RP/2410";
-        }
+    // socials
 
+function r_discord() {
+    window.location.href = "https://discord.gg/5DRCKTRhy3";
+}
 
-        function toggleNav() {
-            var nav = document.querySelector('.nav');
-            nav.classList.toggle('active');
-        }
+function r_youtube() {
+    window.location.href = "https://www.youtube.com/@flipside-rp";
+}
 
+function r_tt() {
+    window.location.href = "https://www.tiktok.com/@flipside_rp";
+}
 
-        document.addEventListener('DOMContentLoaded', function(){
-            var script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-            script.onload = function(){
-            particlesJS("snow", {
-            "particles": {
-            "number": {
-            "value": 70,
-            "density": {
-            "enable": true,
-            "value_area": 800
-            }
-            },
-            "color": {
-            "value": "#ffffff"
-            },
-            "opacity": {
-            "value": 0.7,
-            "random": false,
-            "anim": {
-            "enable": false
-            }
-            },
-            "size": {
-            "value": 5,
-            "random": true,
-            "anim": {
-            "enable": false
-            }
-            },
-            "line_linked": {
-            "enable": false
-            },
-            "move": {
-            "enable": true,
-            "speed": 3,
-            "direction": "bottom",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-            "enable": true,
-            "rotateX": 300,
-            "rotateY": 1200
-            }
-            }
-            },
-            "interactivity": {
-            "events": {
-            "onhover": {
-            "enable": false
-            },
-            "onclick": {
-            "enable": false
-            },
-            "resize": false
-            }
-            },
-            "retina_detect": true
-            });
-            }
-            document.head.append(script);
-        }      );
+function r_mc_org_ua() {
+    window.location.href = "https://minecraft.org.ua/minecraft-servers/FlipSide-RP/2410";
+}
+
+// nav
+
+function toggleNav() {
+    var nav = document.querySelector('.nav');
+    nav.classList.toggle('active');
+}
     </script>
 </body>
