@@ -9,7 +9,7 @@
 
 body {
     background-color: #121212;
-    background-image: url(/src/img/bg.png);
+    background-image: url(/src/img/bg-season-end.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,21 +52,25 @@ header {
 
 .logo {
     font-size: 2em;
-    user-select: none
+    user-select: none;
+    color: #4b6c59;
 }
 
 .nav a {
     position: relative;
     font-size: 1.1em;
-    color: #FFF;
+    color: #717171;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
+    padding: 2px 8px;
+    border-radius: 21px;
 }
 
 .nav a:hover {
-    color: #898989;
+    color: #f1f1f1;
+    background-color: #4b6c59;
 }
 
 .login a {
@@ -187,7 +191,7 @@ header {
     margin-top: 20px;
     font-size: 20px;
     letter-spacing: 1.5px;
-    padding: 30px 60px;
+    padding: 15px 30px;
     font-weight: 100;
     margin-top: 40px;
     border-radius: 21px;
@@ -257,8 +261,7 @@ header {
 
 .discord {
     font-size: 1em;
-    height: 70px;
-    width: 330px;
+    padding: 10px 30px;
     color: #FFF;
     background-color: #5865F2;
     border: none;
